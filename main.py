@@ -182,9 +182,9 @@ def top_20_most_similar():
 # recommender_test()
 # avg_test()
 # views_test()
-# item_based_test()
+#item_based_test()
 # top_20_most_similar()
 # similar_items_test()
 # item_based_personal()
-# slope_one_test()
+#slope_one_test()
 

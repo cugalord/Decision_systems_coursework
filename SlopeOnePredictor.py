@@ -31,23 +31,24 @@ class SlopeOnePredictor:
         npmatrix = self.df.to_numpy()
         npmatrix[np.isnan(npmatrix)] = 0
         users = len(npmatrix)
-        items = len(npmatrix[0])
+        movies = len(npmatrix[0])
+        dev = np.zeros((movies, movies))
 
-        dev = np.zeros((items, items))
-        for i in range(items):
-            for j in range(items):
-                if i == j:
-                    break
-                else:
+        for i in range(movies):
+            for j in range(movies):
+                if i != j:
                     dev_temp = get_dev(i, j, users, npmatrix)
                     dev[i][j] = dev_temp
-                    dev[j][i] = (-1) * dev_temp
+                    dev[j][i] = np.negative(dev_temp)
+                else:
+                    break
 
-        pred_mat = np.zeros((users, items))
+        pred_mat = np.zeros((users, movies))
         for user in range(users):
             sel = np.where(npmatrix[user] != 0)[0]
-            for j in range(items):
-                pred_mat[user][j] = (np.sum(dev[j][sel] + npmatrix[user][sel])) / len(sel)
+            user_sel = npmatrix[user][sel]
+            for j in range(movies):
+                pred_mat[user][j] = (np.sum(dev[j][sel] + user_sel)) / len(sel)
 
         self.df = pd.DataFrame(pred_mat, columns=self.df.columns, index=self.df.index)
 
