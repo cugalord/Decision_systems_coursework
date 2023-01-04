@@ -18,7 +18,7 @@ class ItemBasedPredictor:
         self.df = usr_i_data.df.copy()
         self.avg_ratings = self.df.groupby("userID")["rating"].mean()
         self.df["rating"] = (self.df.set_index(["userID"])["rating"] - self.avg_ratings).values
-        self.df.drop(columns=["date_day", "date_month", "date_year", "date_hour", "date_minute", "date_second"],
+        self.df.drop(columns=["day", "month", "year", "date_hour", "date_minute", "date_second"],
                      inplace=True)
 
         npmatrix = pd.DataFrame(columns=self.df["movieID"].unique(), index=self.df["movieID"].unique()).fillna(

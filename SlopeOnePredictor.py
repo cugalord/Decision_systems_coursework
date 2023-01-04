@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 
-def get_dev(self, i, j, users, npmatrix):
+def get_dev(i, j, users, npmatrix):
     dev = 0
     user_cnt = 0
     for user in range(users):
