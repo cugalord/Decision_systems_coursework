@@ -1,3 +1,8 @@
+from UserItemData import UserItemData
+from MovieData import MovieData
+from Recommender import Recommender
+
+# predicts values based on number of ratings
 class ViewsPredictor:
     def __init__(self) -> None:
         self.usr_i_data = None

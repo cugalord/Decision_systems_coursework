@@ -2,7 +2,7 @@ from UserItemData import UserItemData
 from MovieData import MovieData
 import random as rand
 
-
+# predicts ratings randomly
 class RandomPredictor:
     def __init__(self, min, max):
         self.usr_i_data = None

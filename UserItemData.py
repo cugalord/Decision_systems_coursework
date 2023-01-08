@@ -1,6 +1,8 @@
 import pandas as pd
 
 
+# class with pandas dataframe
+# can be read from date, to date, or with minimal ratings for movie
 class UserItemData:
     def __init__(self, path, start_date=None, end_date=None, min_ratings=None):
         self.path = path
@@ -23,6 +25,6 @@ class UserItemData:
             cnt = self.df["movieID"].value_counts()
             self.df = self.df[self.df["movieID"].isin(cnt[cnt >= min_ratings].index)]
 
-
+    # returns no of ratings in the dataframe
     def no_of_ratings(self):
         return self.df.shape[0]

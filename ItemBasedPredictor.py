@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import math
 
-
+# predicts based on similarity between 2 items
 class ItemBasedPredictor:
     def __init__(self, min_values=0, threshold=0):
         self.avg_ratings = None
@@ -25,6 +25,7 @@ class ItemBasedPredictor:
             0).to_numpy().astype("float64")
         for i in range(len(npmatrix)):
             for j in range(len(npmatrix)):
+                # if index same or already calculated skip
                 if i == j or npmatrix[i][j] != 0.0:
                     continue
 
@@ -69,9 +70,11 @@ class ItemBasedPredictor:
             movieIDs[movie] = prediction
         return movieIDs.copy()
 
+    # Finds the similarity between the given movies.
     def similarity(self, p1, p2):
         return self.df.loc[p1, p2]
 
+    # Finds n most similar movies to item.
     def similar_items(self, item, n):
         movies = pd.DataFrame(self.df.loc[item, :]).sort_values(item, axis=0, ascending=False).iloc[:n, :].T.columns
         similar = pd.DataFrame(self.df.loc[item, :]).sort_values(item, axis=0, ascending=False).iloc[:n, :].T.values[0]

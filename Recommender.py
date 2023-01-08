@@ -2,7 +2,7 @@ from UserItemData import UserItemData
 from MovieData import MovieData
 from RandomPredictor import RandomPredictor
 
-
+# recommends options based on the given predictor
 class Recommender:
     def __init__(self, pred):
         self.usr_i_data = None

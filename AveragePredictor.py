@@ -1,3 +1,5 @@
+
+# class predicts ratings based on avg ratings
 class AveragePredictor:
     def __init__(self, b = 0) -> None:
         self.usr_i_data = None
@@ -6,6 +8,7 @@ class AveragePredictor:
             raise Exception("AveragePredictor constructor error: argument b < 0")
 
     def fit(self, usr_i_data) -> None:
+        # implementation of formula that was given
         def calculate(k):
             vs = sum(usr_i_data.df[usr_i_data.df["movieID"] == k]["rating"])
             g_avg = usr_i_data.df["rating"].sum() / usr_i_data.df.shape[0]

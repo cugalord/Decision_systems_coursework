@@ -4,7 +4,7 @@ from Recommender import Recommender
 import pandas as pd
 import numpy as np
 
-
+#  Calculates the deviation of items at i and j
 def get_dev(i, j, users, npmatrix):
     dev = 0
     user_cnt = 0
@@ -16,13 +16,14 @@ def get_dev(i, j, users, npmatrix):
         return 0
     return dev / user_cnt
 
-
+# predicts ratings based on the Slope One method
 class SlopeOnePredictor:
     def __init__(self):
         self.df = None
         self.results = dict()
 
     def fit(self, uim):
+        # Create matrix movie=column, user=row, cell = rating
         self.df = uim.df.groupby(["userID", "movieID"]).size().unstack()
 
         for col in self.df:
@@ -34,6 +35,7 @@ class SlopeOnePredictor:
         movies = len(npmatrix[0])
         dev = np.zeros((movies, movies))
 
+        # calculate deviations
         for i in range(movies):
             for j in range(movies):
                 if i != j:
@@ -43,6 +45,7 @@ class SlopeOnePredictor:
                 else:
                     break
 
+        # calculate prediction matrix
         pred_mat = np.zeros((users, movies))
         for user in range(users):
             sel = np.where(npmatrix[user] != 0)[0]
