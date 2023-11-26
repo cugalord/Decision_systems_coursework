@@ -1,0 +1,15 @@
+phone name;manufacturer;weight;display size;display technology;display resolution;cpu;ram size;storage size;battery capacity;os;5g;price
+Fairphone 4;Fairphone;225;6.3;IPS LCD;1080 x 2340 ; Snapdragon 750G 5G (2x2.2 GHz  & 6x1.8 GHz );8;256;3905;Android 11;1;630
+Huawei Mate 50 Pro;Huawei;205;6.7;OLED;1212 x 2616 ;Qualcomm SM8475 Snapdragon 8+ Gen 1 4G (1x3.19 GHz  & 3x2.75 GHz & 4x2.0 GHz );8;256;4700;EMUI 13;0;1532
+Google Pixel 7 Pro;Google;212;6.7;AMOLED;1440 x 3120;Google Tensor G2(2x2.85 GHz  & 2x2.35 GHz  & 4x1.80 GHz );12;256;5000;Android 13;1;999
+Google Pixel 7;Google;197;6.3;AMOLED;1080 x 2400;Google Tensor G2(2x2.85 GHz  & 2x2.35 GHz  & 4x1.80 GHz );8;256;4355;Android 13;1;750
+Samsung Galaxy S22 5G;Samsung;167;6.1;AMOLED;1080 x 2340;Exynos 2200(1x2.8 GHz  & 3x2.50 GHz  & 4x1.8 GHz );8;256;3700;Android 13;1;695
+Samsung Galaxy S22 Ultra 5G;Samsung;228;6.8;AMOLED;1440 x 3088;Exynos 2200(1x2.8 GHz & 3x2.50 GHz & 4x1.8 GHz);12;512;5000;Android 13;1;1100
+OnePlus 10T;Oneplus;204;6.7;AMOLED;1080 x 2412;Qualcomm SM8475 Snapdragon 8+ Gen 1(1x3.19 GHz  & 3x2.75 GHz  & 4x1.80 GHz );12;256;4800;Android 12;1;790
+OnePlus Nord;Oneplus;184;6.4;AMOLED;1080 x 2400;Qualcomm SM7250 Snapdragon 765G 5G (1x2.4 GHz & 1x2.2 GHz  & 6x1.8 GHz);8;256;4115;Android 12;1;340
+Apple iPhone 14;Apple;172;6.1;OLED;1170 x 2532;Apple A15 Bionic (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard);6;128;3280;iOS 16;1;969
+Apple iPhone 14 Pro Max;Apple;240;6.7;OLED;1290 x 2796;Apple A15 Bionic (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard);6;512;4323;iOS 16;1;1706
+Samsung Galaxy A11;Samsung;177;6.4;PLS LCD;720 x 1560;Qualcomm SDM450 Snapdragon 450 (8x1.8 GHz );3;32;4000;Android 12;0;160
+Samsung Galaxy M22;Samsung;186;6.4;AMOLED;720 x 1600;Mediatek MT6769V/CU Helio G80 (2x2.0 GHz  & 6x1.8 GHz);4;128;5000;Android 12;0;245
+Samsung Galaxy F12;Samsung;221;6.5;PLS LCD;720 x 1600;Exynos 850 (4x2.0 GHz & 4x2.0 GHz);4;64;6000;Android 11;0;240
+LG Folder 2;LG;127;2.8;IPS LCD;240 x 320;Qualcomm Snapdragon 210 (4x1.3 GHz);1;8;1470;Android 8;0;150
